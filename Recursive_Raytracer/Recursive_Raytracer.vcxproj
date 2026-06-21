@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{e747ff7f-13b9-4f54-99cd-6091b89e2ad7}</ProjectGuid>
-    <RootNamespace>HW7</RootNamespace>
+    <RootNamespace>Recursive_Raytracer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\parkaeon\source\repos\HW7\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\parkaeon\source\repos\HW7\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\parkaeon\source\repos\HW7\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\parkaeon\source\repos\HW7\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\parkaeon\source\repos\HW7\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\parkaeon\source\repos\HW7\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\parkaeon\source\repos\HW7\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\parkaeon\source\repos\HW7\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\park\source\repos\A-simple-raytracer\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -150,24 +150,31 @@
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)framebuffer.vs" "$(OutDir)"
+copy /Y "$(ProjectDir)framebuffer.fs" "$(OutDir)"</Command>
+      <Message>Copying framebuffer shaders to output directory</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\glad.c" />
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\lowlevel.cpp" />
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\raytrace.cpp" />
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\shader.cpp" />
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\SimpleRayTracer.cpp" />
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\tracer.cpp" />
+    <ClCompile Include="lowlevel.cpp" />
+    <ClCompile Include="raytrace.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="SimpleRayTracer.cpp" />
+    <ClCompile Include="tracer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\lowlevel.h" />
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\raytrace.h" />
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\raytraceData.h" />
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\shader.h" />
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\tracer.h" />
+    <ClInclude Include="lowlevel.h" />
+    <ClInclude Include="raytrace.h" />
+    <ClInclude Include="raytraceData.h" />
+    <ClInclude Include="shader.h" />
+    <ClInclude Include="tracer.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="\\Mac\Home\Downloads\HW7\codes\framebuffer.fs" />
-    <None Include="\\Mac\Home\Downloads\HW7\codes\framebuffer.vs" />
+    <None Include="framebuffer.fs" />
+    <None Include="framebuffer.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

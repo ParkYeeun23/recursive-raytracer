@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -15,47 +15,47 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\shader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\SimpleRayTracer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\tracer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\lowlevel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="\\Mac\Home\Downloads\HW7\codes\raytrace.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lowlevel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="raytrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleRayTracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\shader.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="lowlevel.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\tracer.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="raytrace.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\lowlevel.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="raytraceData.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\raytrace.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="shader.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\\Mac\Home\Downloads\HW7\codes\raytraceData.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="tracer.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="\\Mac\Home\Downloads\HW7\codes\framebuffer.fs">
+    <None Include="framebuffer.fs">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="\\Mac\Home\Downloads\HW7\codes\framebuffer.vs">
+    <None Include="framebuffer.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

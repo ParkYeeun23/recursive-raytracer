@@ -16,11 +16,10 @@ void lowlevel::initCanvas(int w , int h)
 {
 	int i;
 
-	/* get memory */	
 	int cavasSize = w * h * 3;
 	canvas = new GLubyte[cavasSize]();
 
-	/* clear it */
+	// clear to white
 	for (i = 0; i < w * h * 3; i++) {
 		canvas[i] = 0xFF;
 	}
